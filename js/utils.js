@@ -1,44 +1,33 @@
 function behaviour() {
-    moviesBehaviour();
+    var movies = moviesBehaviour();
     imageCarrouselBehaviour();
+    movieSearcherBehaviour(movies);
 }
 
 function moviesBehaviour() {
   var movies = [];
-  movies = getMovies().then((arrayMovies) => {
-    movies = arrayMovies;
+  getMovies().then((arrayMovies) => {
     showMovies(arrayMovies);
-  });
-}
-
-function getMovies() {
-  var promise = new Promise( (resolve,reject) => {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET","http://localhost:3000/peliculas/",true);
-    xhr.onreadystatechange = (() => {
-      if(xhr.status == 200 && xhr.readyState == 4) {
-        resolve(JSON.parse(xhr.responseText));
-      } 
+    arrayMovies.forEach((movie) => {
+      movies.push(movie);
     });
-    xhr.send();
   });
-  return promise;
-}
+  return movies;
 
-function showMovies (movies) {
-  var contentMovies = document.getElementsByClassName("content-cards")[0];
-  movies.forEach(movie => {
-    var cardMovie = document.createElement("div");
-    cardMovie.setAttribute("class","film-card");
-    cardMovie.innerHTML = getHTMLContentMovie(movie);
-    contentMovies.appendChild(cardMovie);
-  });
-}
+  function getMovies() {
+    var promise = new Promise( (resolve,reject) => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET","http://localhost:3000/peliculas/",true);
+      xhr.onreadystatechange = (() => {
+        if(xhr.status == 200 && xhr.readyState == 4) {
+          resolve(JSON.parse(xhr.responseText));
+        } 
+      });
+      xhr.send();
+    });
+    return promise;
+  }
 
-function getHTMLContentMovie(movie) {
-  return `<img src="${movie.cover}" alt="">
-  <p class="film-title">${movie.title}</p>
-  <p class="film-author">${movie.author}</p>`;
 }
 
 function imageCarrouselBehaviour() {
@@ -70,5 +59,49 @@ function imageCarrouselBehaviour() {
           contentHeader.classList.add(`bg${position}`);
           break;
       }
+  }
+}
+
+function movieSearcherBehaviour(movies) {
+
+  var searcher = document.getElementsByClassName("content-header-searcher")[0].getElementsByTagName("input")[0];
+
+  searcher.addEventListener("keyup", filterFilms);
+
+  function filterFilms(e) {
+    var textSearch = e.target.value;
+    var filteredFilms = [];
+    if(!!textSearch.trim()) {
+      filteredFilms = movies.filter((movie) => movie.title.includes(textSearch) || movie.author.includes(textSearch) );
+      removeMovies();
+      showMovies(filteredFilms);
+    } else {
+      removeMovies();
+      showMovies(movies);
+    }
+  }
+
+}
+
+function showMovies (movies) {
+  var contentMovies = document.getElementsByClassName("content-cards")[0];
+  movies.forEach(movie => {
+    var cardMovie = document.createElement("div");
+    cardMovie.setAttribute("class","film-card");
+    cardMovie.innerHTML = getHTMLContentMovie(movie);
+    contentMovies.appendChild(cardMovie);
+  });
+
+  function getHTMLContentMovie(movie) {
+    return `<img src="${movie.cover}" alt="">
+    <p class="film-title">${movie.title}</p>
+    <p class="film-author">${movie.author}</p>`;
+  }
+}
+
+function removeMovies() {
+  var contentMovies = document.getElementsByClassName("content-cards")[0];
+  while(contentMovies.firstChild) {
+    contentMovies.removeChild(contentMovies.firstChild);
   }
 }
