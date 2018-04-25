@@ -1,19 +1,19 @@
 {
   "peliculas": [
-    { "id": 1, "cover": "https://pics.filmaffinity.com/the_curious_case_of_benjamin_button-553974725-mmed.jpg","title": "El curioso caso de Benjamin Button", "author": "David Fincher", "gender":"Drama", "year": 2008 },
-    { "id": 2, "cover": "https://pics.filmaffinity.com/memoirs_of_a_geisha-997537506-mmed.jpg","title": "Memorias de una geisha", "author": "Rob Marshall", "gender":"Drama", "year": 2005 },
-    { "id": 3, "cover": "https://pics.filmaffinity.com/captain_fantastic-545150407-mmed.jpg","title": "Captain Fantastic", "author": "Matt Ross", "gender":"Comedia", "year": 2016 },
-    { "id": 4, "cover": "https://pics.filmaffinity.com/the_lord_of_the_rings_the_fellowship_of_the_ring-952398002-mmed.jpg","title": "El señor de los anillos: La comunidad del anillo", "author": "Peter Jackson", "gender":"Fantastico", "year": 2001 },
-    { "id": 5, "cover": "https://pics.filmaffinity.com/harry_potter_and_the_sorcerer_s_stone-255494440-mmed.jpg","title": "Harry Potter y la piedra filosofal", "author": "Chris Columbus", "gender":"Fantastico", "year": 2001 },
-    { "id": 6, "cover": "https://pics.filmaffinity.com/la_la_land-262021831-mmed.jpg","title": "La la land", "author": "Damien Chazelle", "gender":"Musical", "year": 2016 },
-    { "id": 7, "cover": "https://pics.filmaffinity.com/the_sound_of_music-154796714-mmed.jpg","title": "Sonrisas y lagrimas", "author": "Robert Wise", "gender":"Musical", "year": 1965 },
-    { "id": 8, "cover": "https://pics.filmaffinity.com/legends_of_the_fall-692792137-mmed.jpg","title": "Leyendas de pasion", "author": "Edward Zwick", "gender":"Romance", "year": 1994 },
-    { "id": 9, "cover": "https://pics.filmaffinity.com/moulin_rouge-492344022-mmed.jpg","title": "Moulin Rouge", "author": "Baz Luhrmann", "gender":"Musical", "year": 2001 },
-    { "id": 10, "cover": "https://pics.filmaffinity.com/big_fish-838287233-mmed.jpg","title": "Big Fish", "author": "Tim Burton", "gender":"Fantastico", "year": 2003 },
-    { "id": 11, "cover": "https://pics.filmaffinity.com/the_shawshank_redemption-576140557-mmed.jpg","title": "Cadena perpetua", "author": "Frank Darabont", "gender":"Drama", "year": 1994 },
-    { "id": 12, "cover": "https://pics.filmaffinity.com/inception-652954101-mmed.jpg","title": "Origen", "author": "Christopher Nolan", "gender":"Thriller", "year": 2010 },
-    { "id": 13, "cover": "https://pics.filmaffinity.com/shutter_island-215721197-mmed.jpg","title": "Shutter island", "author": "Martin Scorsese", "gender":"Thriller", "year": 2010 },
-    { "id": 14, "cover": "https://pics.filmaffinity.com/match_point-926906723-mmed.jpg","title": "Match point", "author": "Woody Allen", "gender":"Drama", "year": 2005 },
-    { "id": 15, "cover": "https://pics.filmaffinity.com/up-672315222-large.jpg","title": "UP", "author": "Pete Docter", "gender":"Animacion", "year": 2009 }
+    { "id": 1, "cover": "images/image1.jpg","title": "El curioso caso de Benjamin Button", "author": "David Fincher", "gender":"Drama", "year": 2008 },
+    { "id": 2, "cover": "images/image2.jpg","title": "Memorias de una geisha", "author": "Rob Marshall", "gender":"Drama", "year": 2005 },
+    { "id": 3, "cover": "images/image3.jpg","title": "Captain Fantastic", "author": "Matt Ross", "gender":"Comedia", "year": 2016 },
+    { "id": 4, "cover": "images/image4.jpg","title": "El señor de los anillos: La comunidad del anillo", "author": "Peter Jackson", "gender":"Fantastico", "year": 2001 },
+    { "id": 5, "cover": "images/image5.jpg","title": "Harry Potter y la piedra filosofal", "author": "Chris Columbus", "gender":"Fantastico", "year": 2001 },
+    { "id": 6, "cover": "images/image6.jpg","title": "La la land", "author": "Damien Chazelle", "gender":"Musical", "year": 2016 },
+    { "id": 7, "cover": "images/image7.jpg","title": "Sonrisas y lagrimas", "author": "Robert Wise", "gender":"Musical", "year": 1965 },
+    { "id": 8, "cover": "images/image8.jpg","title": "Leyendas de pasion", "author": "Edward Zwick", "gender":"Romance", "year": 1994 },
+    { "id": 9, "cover": "images/image9.jpg","title": "Moulin Rouge", "author": "Baz Luhrmann", "gender":"Musical", "year": 2001 },
+    { "id": 10, "cover": "images/image10.jpg","title": "Big Fish", "author": "Tim Burton", "gender":"Fantastico", "year": 2003 },
+    { "id": 11, "cover": "images/image11.jpg","title": "Cadena perpetua", "author": "Frank Darabont", "gender":"Drama", "year": 1994 },
+    { "id": 12, "cover": "images/image12.jpg","title": "Origen", "author": "Christopher Nolan", "gender":"Thriller", "year": 2010 },
+    { "id": 13, "cover": "images/image13.jpg","title": "Shutter island", "author": "Martin Scorsese", "gender":"Thriller", "year": 2010 },
+    { "id": 14, "cover": "images/image14.jpg","title": "Match point", "author": "Woody Allen", "gender":"Drama", "year": 2005 },
+    { "id": 15, "cover": "images/image15.jpg","title": "UP", "author": "Pete Docter", "gender":"Animacion", "year": 2009 }
   ]
 }
