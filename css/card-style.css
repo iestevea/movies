@@ -1,0 +1,21 @@
+.content-cards .film-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+.content-cards .film-card img {
+  max-width: 90%;
+}
+.content-cards .film-card .film-title {
+  font-size: 15px;
+}
+.content-cards .film-card .film-author {
+  font-size: 12px;
+}
+.content-cards .film-card p {
+  max-width: 90%;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin: 6px auto;
+}
