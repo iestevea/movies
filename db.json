@@ -1,6 +1,6 @@
 {
   "peliculas": [
-    { "id": 1, "cover": "https://pics.filmaffinity.com/the_curious_case_of_benjamin_button-553974725-mmed.jpg","title": "El curioso caso de Benjamin Button", "author": "David Fincher", "gender":"Drama", "year": 208 },
+    { "id": 1, "cover": "https://pics.filmaffinity.com/the_curious_case_of_benjamin_button-553974725-mmed.jpg","title": "El curioso caso de Benjamin Button", "author": "David Fincher", "gender":"Drama", "year": 2008 },
     { "id": 2, "cover": "https://pics.filmaffinity.com/memoirs_of_a_geisha-997537506-mmed.jpg","title": "Memorias de una geisha", "author": "Rob Marshall", "gender":"Drama", "year": 2005 },
     { "id": 3, "cover": "https://pics.filmaffinity.com/captain_fantastic-545150407-mmed.jpg","title": "Captain Fantastic", "author": "Matt Ross", "gender":"Comedia", "year": 2016 },
     { "id": 4, "cover": "https://pics.filmaffinity.com/the_lord_of_the_rings_the_fellowship_of_the_ring-952398002-mmed.jpg","title": "El señor de los anillos: La comunidad del anillo", "author": "Peter Jackson", "gender":"Fantastico", "year": 2001 },
