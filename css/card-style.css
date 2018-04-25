@@ -3,19 +3,22 @@
   flex-direction: column;
   align-items: center;
   padding: 10px 0;
+  cursor: pointer;
+  background-color: #2e5b9e;
+  box-shadow: 1px 4px 12px 0px rgba(0,0,0,0.75);
 }
 .content-cards .film-card img {
   max-width: 90%;
 }
 .content-cards .film-card .film-title {
-  font-size: 15px;
+  font-size: 16px;
+  color: white;
 }
 .content-cards .film-card .film-author {
-  font-size: 12px;
+  font-size: 15px;
 }
 .content-cards .film-card p {
   max-width: 90%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   text-align: center;
-  margin: 6px auto;
 }
