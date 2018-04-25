@@ -9,6 +9,7 @@
 }
 .content-cards .film-card img {
   max-width: 90%;
+  box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 }
 .content-cards .film-card .film-title {
   font-size: 16px;
@@ -21,4 +22,10 @@
   max-width: 90%;
   font-family: 'PT Sans', sans-serif;
   text-align: center;
+}
+.content-cards .film-card:hover {
+  background-color: #2a5492ee;
+}
+.content-cards .film-card:active {
+  box-shadow: inset 0px 4px 20px 0px rgba(0,0,0,0.75);
 }
