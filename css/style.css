@@ -71,6 +71,14 @@ body>header {
   transition: all 1s ease-in-out;
   background-image:url(../images/background4.jpg) ;
 }
+.content-header.bg4 {
+  transition: all 1s ease-in-out;
+  background-image:url(../images/background5.jpg) ;
+}
+.content-header.bg5 {
+  transition: all 1s ease-in-out;
+  background-image:url(../images/background6.jpg) ;
+}
 .content-header-searcher {
   width: 60%;
   height: 60px;

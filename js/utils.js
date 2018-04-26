@@ -39,25 +39,31 @@ function imageCarrouselBehaviour() {
     var contentHeader = document.getElementsByClassName("content-header")[0];
       switch(position) {
         case 0:
-          contentHeader.classList.remove(`bg${position}`);
-          position++;
-          contentHeader.classList.add(`bg${position}`);
+          position = changeBackground(position);
           break;
         case 1:
-          contentHeader.classList.remove(`bg${position}`);
-          position++;
-          contentHeader.classList.add(`bg${position}`);
+          position = changeBackground(position);
           break;
         case 2:
-          contentHeader.classList.remove(`bg${position}`);
-          position++;
-          contentHeader.classList.add(`bg${position}`);
+          position = changeBackground(position);
           break;
         case 3:
+          position = changeBackground(position);
+          break;
+        case 4:
+          position = changeBackground(position);
+          break;
+        case 5:
           contentHeader.classList.remove(`bg${position}`);
           position = 0;
           contentHeader.classList.add(`bg${position}`);
           break;
+      }
+      function changeBackground(position) {
+        contentHeader.classList.remove(`bg${position}`);
+        position++;
+        contentHeader.classList.add(`bg${position}`);
+        return position;
       }
   }
 }
