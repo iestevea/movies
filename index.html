@@ -16,23 +16,24 @@
   <title>Peliculas</title>
 </head>
 <body onload="behaviour()">
-  <div class="modal">
+  <div class="modal-filter hidden">
     <div class="modal-filter-films-options">
+      <!-- <a href="#"><i class="material-icons md-18 md-black close">close</i></a> -->
       <p>Filtrar por genero:</p>
       <div class="filter-gender-options">
-        <input type="radio" name="" id=""> Drama<br>
-        <input type="radio" name="" id=""> Comedia<br>
-        <input type="radio" name="" id=""> Musical<br>
-        <input type="radio" name="" id=""> Fantastico<br>
-        <input type="radio" name="" id=""> Romance<br>
-        <input type="radio" name="" id=""> Animacion<br>
-        <input type="radio" name="" id=""> Thriller<br>
+        <input type="radio" name="Drama"> Drama<br>
+        <input type="radio" name="Comedia"> Comedia<br>
+        <input type="radio" name="Musical"> Musical<br>
+        <input type="radio" name="Fantastico"> Fantastico<br>
+        <input type="radio" name="Romance"> Romance<br>
+        <input type="radio" name="Animacion"> Animacion<br>
+        <input type="radio" name="Thriller"> Thriller<br>
       </div>
       <p>Filtrar por año:</p>
       <div class="filter-year-options">
-        <input type="radio" name="" id=""> < 2000<br>
-        <input type="radio" name="" id=""> Entre 2000 y 2010<br>
-        <input type="radio" name="" id=""> > 2010<br>
+        <input type="radio" name="menor2000"> < 2000<br>
+        <input type="radio" name="entre2000y2010"> Entre 2000 y 2010<br>
+        <input type="radio" name="mayor2010"> > 2010<br>
       </div>
       <button class="modal-filter-btn">Filtrar</button>
     </div>

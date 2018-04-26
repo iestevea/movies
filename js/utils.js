@@ -2,6 +2,7 @@ function behaviour() {
     var movies = moviesBehaviour();
     imageCarrouselBehaviour();
     movieSearcherBehaviour(movies);
+    modalBehaviour(movies);
 }
 
 function moviesBehaviour() {
@@ -89,6 +90,104 @@ function movieSearcherBehaviour(movies) {
 
 }
 
+function modalBehaviour(movies) {
+  var filterBtn = document.getElementsByClassName("header-filter-button")[0].getElementsByTagName("a")[0];
+  
+  var filters;
+
+  filterBtn.addEventListener("click", showFilterModal);
+  
+  function showFilterModal() {
+    var modalFilter = document.getElementsByClassName("modal-filter")[0];
+    modalFilter.classList.remove("hidden");
+
+    var contentShadow = document.getElementsByClassName("content-and-header")[0];
+    contentShadow.addEventListener("click",hideFilterModal);
+
+    var filterBtnModal = document.getElementsByClassName("modal-filter-btn")[0];
+    filterBtnModal.addEventListener("click", hideFilterModal);
+
+  }
+
+  function hideFilterModal() {
+    
+    var moviesFiltered = filterModalBehaviour();
+
+    var modalFilter = document.getElementsByClassName("modal-filter")[0];
+    modalFilter.classList.add("hidden");
+    
+    if(moviesFiltered.length !=0){
+      removeMovies();
+      showMovies(moviesFiltered);
+    }
+
+    function filterModalBehaviour() {
+
+      var genderFilters = document.getElementsByClassName("filter-gender-options")[0].getElementsByTagName("input");
+      var yearFilters = document.getElementsByClassName("filter-year-options")[0].getElementsByTagName("input");
+
+      var genderFiltersChecked = Array.from(genderFilters).filter((filter) => filter.checked);
+      genderFiltersChecked = genderFiltersChecked.map((filter) => filter.name);
+      Array.from(genderFilters).forEach((filter) => filter.checked = false);
+
+      var yearFiltersChecked = Array.from(yearFilters).filter((filter) => filter.checked);
+      yearFiltersChecked = yearFiltersChecked.map((filter) => filter.name);
+      Array.from(yearFilters).forEach((filter) => filter.checked = false);
+
+      var moviesFilteredByGender = filterMoviesByGender(genderFiltersChecked,movies);
+      var moviesFilteredByYear = filterMoviesByYear(yearFiltersChecked,movies);
+
+      var moviesFilteredByGenderisEmpty = moviesFilteredByGender.length == 0;
+      var moviesFilteredByYearisEmpty = moviesFilteredByYear.length == 0;
+      
+      if(!moviesFilteredByGenderisEmpty && !moviesFilteredByYearisEmpty) {
+        filteredMovies = moviesFilteredByGender.filter((movie) => 
+          moviesFilteredByYear.includes(movie) );
+      } else if(moviesFilteredByGenderisEmpty) {
+        filteredMovies = moviesFilteredByYear;
+      } else {
+        filteredMovies = moviesFilteredByGender;
+      }
+
+      return filteredMovies;
+    }
+  }
+}
+
+function filterMoviesByGender(filters,movies) {
+  return movies.filter((movie) => filters.includes(movie.gender) );
+}
+
+function filterMoviesByYear(filters,movies) {
+  var moviesFiltered = [];
+  filters.forEach((filter) => {
+    switch(filter){
+      case "menor2000":
+        moviesFiltered.push.apply(moviesFiltered,menor2000(movies));
+        break;
+      case "entre2000y2010":
+        moviesFiltered.push.apply(moviesFiltered,entre2000y2010(movies));
+        break;
+      case "mayor2010":
+        moviesFiltered.push.apply(moviesFiltered,mayor2010(movies));
+        break;
+    }
+
+  });
+
+  function menor2000(movies) {
+    return movies.filter((movie) => movie.year < 2000);
+  }
+  function entre2000y2010(movies) {
+    return movies.filter((movie) => movie.year < 2010 && movie.year > 2000);
+  }
+  function mayor2010(movies) {
+    return movies.filter((movie) => movie.year > 2010);
+  }
+
+  return moviesFiltered;
+}
+
 function showMovies (movies) {
   var contentMovies = document.getElementsByClassName("content-cards")[0];
   movies.forEach(movie => {
@@ -111,3 +210,4 @@ function removeMovies() {
     contentMovies.removeChild(contentMovies.firstChild);
   }
 }
+
