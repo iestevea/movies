@@ -101,9 +101,6 @@ function modalBehaviour(movies) {
     var modalFilter = document.getElementsByClassName("modal-filter")[0];
     modalFilter.classList.remove("hidden");
 
-    var contentShadow = document.getElementsByClassName("content-and-header")[0];
-    contentShadow.addEventListener("click",hideFilterModal);
-
     var filterBtnModal = document.getElementsByClassName("modal-filter-btn")[0];
     filterBtnModal.addEventListener("click", hideFilterModal);
 
